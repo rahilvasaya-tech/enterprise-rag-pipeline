@@ -124,14 +124,19 @@ The End Chat button appears in the top navigation bar after the first message is
 | Authentication | Enterprise SSO / JWT |
 | Hosting | Azure App Services |
 ### Design Decisions
+
 **Why React and Tailwind over a pre-built chat widget?**
 Pre-built widgets cannot be customized for enterprise branding, authentication, or citation rendering. A custom React interface gives full control over UX and security.
+
 **Why suggested questions on the landing screen?**
 Enterprise users often do not know what the assistant can help with. Suggested questions drive faster adoption without training or documentation.
+
 **Why expandable citation boxes?**
 Inline citations interrupt the reading flow. Expandable boxes keep answers clean while giving users full access to source verification on demand.
+
 **Why thumbs up and down on every response?**
 Explicit feedback per response gives a direct quality signal for tuning retrieval and identifying knowledge gaps systematically.
+
 **Why show End Chat only after the first message?**
 Keeping the landing screen clean and focused on suggested questions and the input box improves first-time user experience.
 
