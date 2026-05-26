@@ -82,6 +82,8 @@ Operational management without engineering intervention.
 - Retrieval Accuracy Controls: tuning semantic ranking and retrieval parameters
 - Answer Correctness Monitoring: flagging and reviewing low-confidence responses
 
+![Admin Panel](admin-panel.png)
+
 ---
 
 ## Tech Stack
