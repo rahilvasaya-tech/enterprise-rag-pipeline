@@ -128,35 +128,45 @@ The End Chat button appears in the top navigation bar after the first message is
 ### Design Decisions
 
 **Why React and Tailwind over a pre-built chat widget?**
+
 Pre-built widgets cannot be customized for enterprise branding, authentication, or citation rendering. A custom React interface gives full control over UX and security.
 
 **Why suggested questions on the landing screen?**
+
 Enterprise users often do not know what the assistant can help with. Suggested questions drive faster adoption without training or documentation.
 
 **Why expandable citation boxes?**
+
 Inline citations interrupt the reading flow. Expandable boxes keep answers clean while giving users full access to source verification on demand.
 
 **Why thumbs up and down on every response?**
+
 Explicit feedback per response gives a direct quality signal for tuning retrieval and identifying knowledge gaps systematically.
 
 **Why show End Chat only after the first message?**
+
 Keeping the landing screen clean and focused on suggested questions and the input box improves first-time user experience.
 
 ## Key Design Decisions
 
 **Why a Query Intelligence layer before retrieval?**
+
 Raw user questions are often vague, multi-part, or unsafe. Processing the query before retrieval improves result quality and prevents policy violations from reaching the LLM.
 
 **Why both vector and keyword retrieval?**
+
 Vector search finds semantically similar content. Keyword search finds exact policy references and specific terms. Neither alone is sufficient for enterprise documents.
 
 **Why an Answer Validator before returning the response?**
+
 In regulated environments, a confident wrong answer is worse than no answer. The validator checks citation presence and confidence score before the response reaches the user.
 
 **Why a Conversation State Machine?**
+
 Multi-turn conversations require tracking what has been asked, what clarifications are pending, and what context carries forward. A state machine makes this explicit and auditable.
 
 **Why an Admin Ingestion Panel?**
+
 Knowledge bases need to stay current. Giving administrators a UI to upload and re-index documents without engineering involvement is critical for production sustainability.
 
 ---
