@@ -98,6 +98,43 @@ Operational management without engineering intervention.
 
 ---
 
+## Frontend Layer
+The chat interface is a React and Tailwind CSS web application providing employees with a clean, accessible conversational AI experience.
+![Chat Interface](chat-interface.png)
+### Interface Features
+- Suggested question cards on landing screen to guide first-time users
+- Conversational chat interface with 500 character input limit
+- Citation boxes displayed below each answer, expandable on click to show source document name and URL
+- Thumbs up and thumbs down feedback buttons on every response for quality tracking
+- End Chat button appears in the top bar after the first message is sent
+- 24/7 availability indicator showing live system status
+- Fully responsive layout across desktop and mobile
+### Citation Experience
+Every AI response includes citation boxes at the bottom. Clicking a citation box expands it to show the source document name and direct URL. This allows employees to verify answers against official policy sources without leaving the interface.
+### Feedback System
+Thumbs up and down feedback is captured per response and stored alongside the query, retrieved chunks, and generated answer. This feeds directly into retrieval optimization and semantic ranking tuning, continuously improving response quality.
+### Session Management
+The End Chat button appears in the top navigation bar after the first message is sent. On ending the session, conversation history is cleared and the user is returned to the landing screen.
+### Frontend Tech Stack
+| Component | Technology |
+|---|---|
+| Framework | React |
+| Styling | Tailwind CSS |
+| API Integration | REST API via FastAPI backend |
+| Authentication | Enterprise SSO / JWT |
+| Hosting | Azure App Services |
+### Design Decisions
+**Why React and Tailwind over a pre-built chat widget?**
+Pre-built widgets cannot be customized for enterprise branding, authentication, or citation rendering. A custom React interface gives full control over UX and security.
+**Why suggested questions on the landing screen?**
+Enterprise users often do not know what the assistant can help with. Suggested questions drive faster adoption without training or documentation.
+**Why expandable citation boxes?**
+Inline citations interrupt the reading flow. Expandable boxes keep answers clean while giving users full access to source verification on demand.
+**Why thumbs up and down on every response?**
+Explicit feedback per response gives a direct quality signal for tuning retrieval and identifying knowledge gaps systematically.
+**Why show End Chat only after the first message?**
+Keeping the landing screen clean and focused on suggested questions and the input box improves first-time user experience.
+
 ## Key Design Decisions
 
 **Why a Query Intelligence layer before retrieval?**
