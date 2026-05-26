@@ -100,7 +100,9 @@ Operational management without engineering intervention.
 
 ## Frontend Layer
 The chat interface is a React and Tailwind CSS web application providing employees with a clean, accessible conversational AI experience.
+
 ![Chat Interface](chat-interface.png)
+
 ### Interface Features
 - Suggested question cards on landing screen to guide first-time users
 - Conversational chat interface with 500 character input limit
