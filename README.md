@@ -78,11 +78,24 @@ Monitors and improves the system over time.
 ### 7. Admin Controls
 Operational management without engineering intervention.
 
-- Admin Ingestion Panel: document upload, chunking, and re-indexing through a UI
-- Retrieval Accuracy Controls: tuning semantic ranking and retrieval parameters
-- Answer Correctness Monitoring: flagging and reviewing low-confidence responses
 
-![Admin Panel](admin-panel.png)
+
+![Admin Dashboard](admin-panel.png)
+
+
+
+The admin panel provides full operational visibility and control without requiring engineering involvement:
+
+- Dashboard: real-time metrics including total queries, active users, average response time, and feedback score with daily trends
+- Queries Per Day chart: tracks usage growth over time
+- Feedback Distribution: donut chart showing positive vs negative response ratings
+- Recent Low Rated Responses: review and action table for quality improvement
+- Document Management: upload, re-index, and manage the knowledge base
+- Chat History: full log of user conversations
+- Retrieval Settings: tune semantic ranking and retrieval parameters
+- Answer Quality Monitor: track response accuracy over time
+- Audit Logs: complete audit trail for compliance
+- User Management: manage access and roles
 
 ---
 
