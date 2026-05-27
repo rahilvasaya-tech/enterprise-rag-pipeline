@@ -9,7 +9,7 @@ A full-stack enterprise RAG architecture designed for large-scale knowledge acce
 
 
 
-![Enterprise RAG Architecture](architecture.png)
+![Enterprise RAG Architecture](architecture/architecture.png)
 
 
 
