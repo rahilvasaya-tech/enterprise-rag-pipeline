@@ -177,14 +177,10 @@ The admin panel provides full operational visibility and control:
 - Audit Logs: complete audit trail for compliance
 - User Management: manage access and roles
 
----
 
 ## Full Query Flow
 
-```
-
 ![Query Flow](architecture/rag-architecture-flow.png)
----
 
 ## Tech Stack
 
