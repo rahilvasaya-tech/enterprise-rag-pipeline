@@ -182,56 +182,8 @@ The admin panel provides full operational visibility and control:
 ## Full Query Flow
 
 ```
-User Query
-    │
-    ▼
-API Control Layer (Auth, Rate Limit, Request Validation)
-    │
-    ▼
-Security Layer 1 — Input
-(Prompt Injection, Jailbreak, SQL Injection, PII, Token Flood, Disallowed Intent)
-    │
-    ▼
-Query Intelligence Layer (Normalize, Clarify, Intent Classification)
-    │
-    ▼
-Context Classifier
-    ├── Context-Dependent → Skip Cache → Retrieval Pipeline
-    └── Context-Free ──────────────────┐
-                                       ▼
-                            Semantic Cache Check
-                                ├── Cache Hit → Security Layer 3 → Return Response
-                                └── Cache Miss → Retrieval Pipeline
-                                                        │
-                                                        ▼
-                                              RBAC Enforcement
-                                                        │
-                                                        ▼
-                                              Hybrid Retrieval (Vector + Keyword)
-                                                        │
-                                                        ▼
-                                    Security Layer 2 — Retrieved Chunk Scanner
-                                    (Indirect Injection Detection, Chunk Sanitization)
-                                                        │
-                                                        ▼
-                                              Context Assembly + LLM Generation
-                                                        │
-                                                        ▼
-                                              Answer Validator + Citation Layer
-                                                        │
-                                                        ▼
-                                    Security Layer 3 — Output
-                                    (PII, Sensitive Data, Exfiltration, Confidence Gate)
-                                                        │
-                                     ┌──────────────────┘
-                                     │ Store in Cache (context-free only)
-                                     ▼
-                               Return Response to User
-                                     │
-                                     ▼
-                               Audit Log + Feedback Capture
-```
 
+![Query Flow](architecture/rag-architecture-flow.png)
 ---
 
 ## Tech Stack
